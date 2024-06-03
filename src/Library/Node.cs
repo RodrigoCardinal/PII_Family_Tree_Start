@@ -7,6 +7,7 @@ namespace Library
     public class Node
     {
         private int number;
+        public Person person;
 
         private List<Node> children = new List<Node>();
 
