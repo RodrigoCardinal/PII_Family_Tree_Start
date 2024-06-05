@@ -6,7 +6,15 @@ namespace Library
 {
     public abstract class Visitor
     {
-        public abstract void Visit(Visitor visitor);
+        public string Content
+        {
+            get
+            {
+                return this.ContentBuilder.ToString();
+            }
+        }
+        protected StringBuilder ContentBuilder { get; } = new StringBuilder();
+
 
 
 

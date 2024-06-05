@@ -6,15 +6,15 @@ namespace Library
 {
     public class Node
     {
+        private Person person;
         private int number;
-        public Person person;
 
-        private List<Node> children = new List<Node>();
+        private List<Node> childrenm = new List<Node>();
 
         public int Number {
             get
             {
-                return this.number;
+                return this.person;
             }
         }
 

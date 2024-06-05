@@ -6,13 +6,32 @@ namespace Library
 {
     public class Person
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        // Declaro parametros name y age
+        private string name;
+        private int age;
 
-        public void Family (string name, int age)
+        //Propiedades   publicas de solo lectura para acceder a los campos name y age
+        public string Name
         {
-            Name = name;
-            Age = age;
+            get 
+            {
+                return this.name; 
+            }
+        }
+
+        public int Age
+        {
+            get
+            { 
+                return this.age; 
+            }
+        }
+
+        //Constructor Person con nombre y edad
+        public Person (string name, int age)
+        {
+            this.name = name;
+            this.age = age;
         }
     }
 }	
