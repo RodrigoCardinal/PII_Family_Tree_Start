@@ -6,11 +6,9 @@ namespace Library
 {
     public class Person
     {
-        // Declaro parametros name y age
         private string name;
         private int age;
 
-        //Propiedades   publicas de solo lectura para acceder a los campos name y age
         public string Name
         {
             get 
@@ -27,11 +25,18 @@ namespace Library
             }
         }
 
-        //Constructor Person con nombre y edad
         public Person (string name, int age)
         {
             this.name = name;
             this.age = age;
+        }
+
+
+
+
+        public void Accept(Visitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }	
